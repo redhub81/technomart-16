@@ -10,18 +10,10 @@
           <a class="header-logo" href="#">
             <img src="http://placehold.it/220x50" width="220" height="50" alt="Техномарт">
           </a>
-          <div class="header-search-block">
-            <span>Поиск:</span>
-          </div>
+          <div class="header-search-block">Поиск:</div>
           <div class="header-user-goods">
-            <div class="goods-bookmark">
-              <span>Закладки:</span>
-              <span>0</span>
-            </div>
-            <div class="goods-cart">
-              <span>Корзина:</span>
-              <span>0</span>
-            </div>
+            <div class="goods-bookmark">Закладки: 0</div>
+            <div class="goods-cart">Корзина: 0</div>
             <a class="btn btn-goods-order" href="#">Оформить заказ</a>
           </div>
         </div>
@@ -184,37 +176,44 @@
         </ul>
       </div>
       <div class="services">
-        <div class="container">
-          <h2>Сервисы</h2>
-          <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными</p>
-          <ul class="service-slider">
-            <li>
-              <b class="service-name">Доставка</b>
-              <div class="service-info">
-                <h3>Доставка</h3>
-                <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!</p>
-                <p>Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
+          <div class="container">
+            <h2>Сервисы</h2>
+            <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными</p>
+            <div class="service-slider">
+              <input type="radio" id="btn-slider-delivery" name="service-toggle" checked>
+              <input type="radio" id="btn-slider-warranty" name="service-toggle">
+              <input type="radio" id="btn-slider-credit" name="service-toggle">
+              <div class="service-slider-controls">
+                <label for="btn-slider-delivery">Доставка</label>
+                <label for="btn-slider-warranty">Гарантия</label>                
+                <label for="btn-slider-credit">Кредит</label>                
               </div>
-            </li>
-            <li>
-              <b class="service-name">Гарантия</b>
-              <div class="service-info">
-                <h3>Гарантия</h3>
-                <p>Мы предоставляем расширенную гарантию на продаваемые товары!</p>
-                <p>Ведь мы неплохо заработаем, поскольку мы уверены в качестве продаваемых товаров!</p>
-              </div>              
-            </li>
-            <li>
-              <b class="service-name">Кредит</b>
-              <div class="service-info">
-                <h3>Кредит</h3>
-                <p>Мы предоставляем рассрочку и возможность покупки товаров в кредит!</p>
-                <p>Ведь мы неплохо заработаем, на объемах продаж и процентах по кредиту!</p>
+              <div class="service-slider-sections">
+                <section class="service-delivery">
+                  <h3>Доставка</h3>
+                  <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>
+                  Ведь мы неплохо заработаем,<br>
+                  поднимая его на ваш этаж!
+                  </p>
+                </section>
+                <section class="service-warranty">
+                  <h3>Гарантия</h3>
+                  <p>
+                  Мы предоставляем расширенную гарантию на продаваемые товары!<br>
+                  Ведь мы неплохо заработаем, поскольку мы уверены в качестве продаваемых товаров!
+                  </p>
+                </section>
+                <section class="service-credit">
+                  <h3>Кредит</h3>
+                  <p>Мы предоставляем рассрочку и возможность покупки товаров в кредит!<br>
+                  Ведь мы неплохо заработаем, на объемах продаж и процентах по кредиту!
+                  </p>
+                </section>
               </div>
-            </li>
-          </ul>
-        </div>
-      </div>
+            </div>            
+          </div>
+        </div> 
       <div class="container index-content">
         <div class="index-content-left">
           <h2 class="index-content-title">Компания «Техномарт»</h2>
