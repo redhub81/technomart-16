@@ -3,64 +3,65 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="main-header">
-        <div class="container header-top">
-          <a class="header-logo" href="#">
-            <img src="http://placehold.it/220x50" width="220" height="50" alt="Техномарт">
-          </a>
-          <div class="header-search-block">Поиск:</div>
-          <div class="header-user-goods">
-            <div class="goods-bookmark">Закладки: 0</div>
-            <div class="goods-cart">Корзина: 0</div>
-            <a class="btn btn-goods-order" href="#">Оформить заказ</a>
-          </div>
+      <div class="container header-top">
+        <a class="header-logo" href="#">
+          <img src="img/logo-tehnomart-main.png" width="220" height="47" alt="Техномарт">
+        </a>
+        <div class="header-search-block">Поиск:</div>
+        <div class="header-user-goods">
+          <div class="goods-bookmark">Закладки: 0</div>
+          <div class="goods-cart">Корзина: 0</div>
+          <a class="btn btn-goods-order" href="#">Оформить заказ</a>
         </div>
-        <div class="container header-midle">
-          <section class="header-shop-info">
-            Интернет-магазин строительных материалов и инструментов для ремонта
-          </section>
-          <section class="header-shop-contacts">
-            <div class="phone">+7 (812) 555-05-55</div>
-            <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-          </section>
-          <div class="header-user-block">
-            <a class="btn btn-login" href="#">Войти</a>
-            <a class="btn" href="#">Регистрация</a>
-          </div>
-        </div>      
-        <div class="container header-bottom">
-          <nav class="main-navigation">
-            <ul>
-              <li>
-                <a href="#">Главаная</a>
-              </li>
-              <li>
-                <a href="#">Компания</a>
-              </li>
-              <li>
-                <a href="#">Каталог</a>
-              </li>
-              <li>
-                <a href="#">Новости</a>
-              </li>
-              <li>
-                <a href="#">Спецпредложения</a>
-              </li>
-              <li>
-                <a href="#">Доставка</a>
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
+      </div>
+      <div class="container header-midle">
+        <section class="header-shop-info">
+          Интернет-магазин строительных материалов и инструментов для ремонта
+        </section>
+        <section class="header-shop-contacts">
+          <div class="phone">+7 (812) 555-05-55</div>
+          <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </section>
+        <div class="header-user-block">
+          <a class="btn btn-login" href="#">Войти</a>
+          <a class="btn" href="#">Регистрация</a>
         </div>
+      </div>      
+      <div class="container header-bottom">
+        <nav class="main-navigation">
+          <ul>
+            <li>
+              <a href="#">Главаная</a>
+            </li>
+            <li>
+              <a href="#">Компания</a>
+            </li>
+            <li>
+              <a href="#">Каталог</a>
+            </li>
+            <li>
+              <a href="#">Новости</a>
+            </li>
+            <li>
+              <a href="#">Спецпредложения</a>
+            </li>
+            <li>
+              <a href="#">Доставка</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <div class="container promo-offers">
-        <div class="offers-item promo-materials">
+        <div class="offers-item promo-materials mark-item-new">
           <b class="offers-name">Материалы</b>
           <a class="btn" href="#">На любой вкус</a>
         </div>
@@ -73,9 +74,23 @@
           <a class="btn" href="#">Для стройки</a>
         </div>
         <div class="offers-slider">
-          <div class="offers-slide promo-perforators">
-            <b class="offers-name">Перфораторы</b>
-            <p>Настоящие мужские игрушки</p>            
+          <input type="radio" id="btn-promo-perforators" name="promo-toggle" checked>
+          <input type="radio" id="btn-promo-drills" name="promo-toggle">
+          <div class="slider-controls">
+              <label for="btn-promo-perforators"></label>
+              <label for="btn-promo-drills"></label>
+          </div>  
+          <div class="slider-inner">
+            <div class="offers-slide promo-perforators">
+              <b class="offers-name">Перфораторы</b>
+              <p>Настоящие мужские игрушки</p>
+              <img src="img/offers-slide-perforators.jpg" width="620" height="266" alt="Ассортимент перфораторов">
+            </div>
+            <div class="offers-slide promo-drills">
+              <b class="offers-name">Дрели</b>
+              <p>Соседям на рабость!</p>
+              <img src="img/offers-slide-drills.jpg" width="620" height="266" alt="Ассортимент дрелей">
+            </div>
           </div>
           <a class="btn" href="#">Открыть каталог</a>
         </div>
@@ -96,7 +111,7 @@
         <ul class="topmost-product-cards">
           <li>
             <a href="#">
-              <img src="http://placehold.it/220x165" width="220" height="165" alt="Перфоратор BOSCH"/>
+              <img src="img/perforator-bosch-bfg-9000.jpg" width="218" height="170" alt="Фото BFG 9000"/>
               <b class="product-name">Перфоратор BOSCH BFG 9000</b>
               <span class="product-price-old">32500 р.</span>
               <span class="product-price">25500 р.</span>
@@ -104,7 +119,7 @@
           </li>
           <li>
             <a href="#">
-              <img src="http://placehold.it/220x165" width="220" height="165" alt="Перфоратор BOSCH"/>
+              <img src="img/perforator-bosch-bfg-3000.jpg" width="218" height="170" alt="Фото BFG 3000"/>
               <b class="product-name">Перфоратор BOSCH BFG 3000</b>
               <span class="product-price-old">22500 р.</span>
               <span class="product-price">15500 р.</span>
@@ -112,7 +127,7 @@
           </li>
           <li>
             <a href="#">
-              <img src="http://placehold.it/220x165" width="220" height="165" alt="Перфоратор BOSCH"/>
+              <img src="img/perforator-bosch-bfg-6000.jpg" width="218" height="170" alt="Фото BFG 6000"/>
               <b class="product-name">Перфоратор BOSCH BFG 6000</b>
               <span class="product-price-old">30500 р.</span>
               <span class="product-price">25500 р.</span>
@@ -120,7 +135,7 @@
           </li>
           <li>
             <a href="#">
-              <img src="http://placehold.it/220x165" width="220" height="165" alt="Перфоратор BOSCH"/>
+              <img src="img/perforator-bosch-bfg-2000.jpg" width="218" height="170" alt="Фото BFG 2000"/>
               <b class="product-name">Перфоратор BOSCH BFG 2000</b>
               <span class="product-price">12500 р.</span>
             </a>
@@ -135,42 +150,42 @@
         <ul class="topmost-manufacturer-cards">
           <li>
             <a href="#">
-              <img src="http://placehold.it/215x140" alt="Bosch"/>
+              <img src="img/logo-bosch.png" width="126" height="37" alt="Bosch"/>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="http://placehold.it/215x140" alt="Makita"/>
+              <img src="img/logo-makita.png" width="123" height="40" alt="Makita"/>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="http://placehold.it/215x140" alt="DeWalt"/>
+              <img src="img/logo-dewalt.png" width="146" height="44" alt="DeWalt"/>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="http://placehold.it/215x140" alt="Интерскол"/>
+              <img src="img/logo-interskol.png" width="184" height="32" alt="Интерскол"/>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="http://placehold.it/215x140" alt="Hitachi"/>
+              <img src="img/logo-hitachi.png" width="143" height="22" alt="Hitachi"/>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="http://placehold.it/215x140" alt="LG"/>
+              <img src="img/logo-lg.png" width="121" height="73" alt="LG"/>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="http://placehold.it/215x140" alt="AEG"/>
+              <img src="img/logo-aeg.png" width="151" height="84" alt="AEG"/>
             </a>
           </li>
           <li>
             <a href="#">
-              <img src="http://placehold.it/215x140" alt="Metabo"/>
+              <img src="img/logo-metabo.png" width="155" height="55" alt="Metabo"/>
             </a>
           </li>
         </ul>
@@ -184,12 +199,12 @@
               <input type="radio" id="btn-slider-delivery" name="service-toggle" checked>
               <input type="radio" id="btn-slider-warranty" name="service-toggle">
               <input type="radio" id="btn-slider-credit" name="service-toggle">
-              <div class="service-slider-controls">
+              <div class="slider-controls">
                 <label for="btn-slider-delivery">Доставка</label>
                 <label for="btn-slider-warranty">Гарантия</label>                
                 <label for="btn-slider-credit">Кредит</label>                
               </div>
-              <div class="service-slider-sections">
+              <div class="slider-inner">
                 <section class="service-delivery">
                   <h3>Доставка</h3>
                   <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>
@@ -233,9 +248,10 @@
         <div class="index-content-right">
           <h2 class="index-content-title">Контакты</h2>
           <p>
-            Вы можете забрать товар сами, заехав в наш офис:
+            Вы можете забрать товар сами,<br>
+            заехав в наш офис:
           </p>
-          <img src="http://placehold.it/300x160" width="300" height="160" alt="Расположение офиса на карте">
+          <img src="img/map-office-location-preview.jpg" width="300" height="158" alt="Расположение офиса на карте">
           <a class="btn" href="#">Заблудились? Напишите нам!</a>
         </div>
       </div>
@@ -245,7 +261,7 @@
         <div class="container">
           <section class="footer-contacts">
             <a class="header-logo" href="#">
-              <img src="http://placehold.it/220x70" width="220" height="70" alt="Техномарт">
+              <img src="img/logo-tehnomart-footer.png" width="220" height="68" alt="Техномарт">
             </a>
             <p>
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
