@@ -1,6 +1,7 @@
 body {
   min-width: 960px;
   font-family: "Cuprum", "Tahoma", sans-serif;
+  /*font-family: "Tahoma", sans-serif;*/
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
@@ -462,7 +463,6 @@ h3 {
 
 .footer-bottom .footer-feadback {
   float: right;
-  width: 150px;
   margin-right: 10px;
   /*** Debug ***/
   background-color: rgba(230, 200, 170, 0.75);
@@ -470,7 +470,6 @@ h3 {
 
 .footer-bottom .footer-developer-copyright {
   float: right;
-  width: 150px;
   /*** Debug ***/
   background-color: rgba(230, 200, 170, 0.75);
 }
@@ -516,7 +515,9 @@ h3 {
   margin-left: 20px;
   margin-bottom: 20px;
   padding: 20px 23px;
-  padding-top: 21px;  
+  padding-top: 21px; 
+  /*** Debug ***/
+  background-color: rgba(200, 230, 170, 0.75);
 }
 
 .promo-offers .offers-item:first-child {
@@ -532,7 +533,7 @@ h3 {
 }
 
 .promo-offers .offers-item .btn {
-  width: 105px;
+  min-width: 105px;
   padding: 10px 15px;
 }
 
