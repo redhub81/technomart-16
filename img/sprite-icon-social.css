@@ -1,0 +1,23 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-icon-social-fb {
+    width: 10px;
+    height: 18px;
+    background-position: -10px -10px;
+}
+
+.sprite-icon-social-inst {
+    width: 17px;
+    height: 17px;
+    background-position: -40px -10px;
+}
+
+.sprite-icon-social-vk {
+    width: 20px;
+    height: 12px;
+    background-position: -77px -10px;
+}

@@ -1,0 +1,41 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-icon-circle-dot {
+    width: 25px;
+    height: 25px;
+    background-position: -10px -10px;
+}
+
+.sprite-icon-circle-dot-disabled {
+    width: 25px;
+    height: 25px;
+    background-position: -10px -55px;
+}
+
+.sprite-icon-circle-dot-hover {
+    width: 25px;
+    height: 25px;
+    background-position: -10px -100px;
+}
+
+.sprite-icon-circle-none {
+    width: 25px;
+    height: 25px;
+    background-position: -10px -145px;
+}
+
+.sprite-icon-circle-none-disabled {
+    width: 25px;
+    height: 25px;
+    background-position: -10px -190px;
+}
+
+.sprite-icon-circle-none-hover {
+    width: 25px;
+    height: 25px;
+    background-position: -10px -235px;
+}

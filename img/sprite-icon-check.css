@@ -1,0 +1,41 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-icon-check-off {
+    width: 23px;
+    height: 23px;
+    background-position: -10px -10px;
+}
+
+.sprite-icon-check-off-disabled {
+    width: 23px;
+    height: 23px;
+    background-position: -10px -53px;
+}
+
+.sprite-icon-check-off-hover {
+    width: 23px;
+    height: 23px;
+    background-position: -10px -96px;
+}
+
+.sprite-icon-check-on {
+    width: 27px;
+    height: 23px;
+    background-position: -10px -139px;
+}
+
+.sprite-icon-check-on-disabled {
+    width: 27px;
+    height: 23px;
+    background-position: -10px -182px;
+}
+
+.sprite-icon-check-on-hover {
+    width: 27px;
+    height: 23px;
+    background-position: -10px -225px;
+}
