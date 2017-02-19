@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,400i,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,400i,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
@@ -11,39 +11,41 @@
     <header>
       <div class="header-top">
         <div class="container clearfix">
-          <a class="header-top-logo" href="#">
-            <img src="img/logo-tehnomart-main.png" width="220" height="47" alt="Техномарт">
-          </a>
+          <a class="header-top-logo" href="index.html">Техномарт</a>
           <form class="header-top-search search-form" action="#" method="post">
             <input id="search-field" type="text" name="search" placeholder="Поиск:">
             <label for="search-field">Поиск:</label>
           </form>
           <div class="header-user-goods clearfix">
-            <a class="btn btn-goods-bookmark" href="#">Закладки: 0</a>
-            <a class="btn btn-goods-cart basketful" href="#">Корзина: 10</a>
-            <a class="btn btn-goods-order" href="#">Оформить заказ</a>
+            <a class="btn btn-goods bookmark" href="#">Закладки: 0</a>
+            <a class="btn btn-goods cart contains" href="#">Корзина: 10</a>
+            <a class="btn btn-order" href="#">Оформить заказ</a>
           </div>
         </div>
       </div>
       <div class="header-midle">
         <div class="container clearfix">
           <section class="header-shop-info">
-            Интернет-магазин строительных материалов<br>
-            и инструментов для ремонта
+            Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта
           </section>
           <section class="header-shop-contacts">
             <div class="phone">+7 (812) 555-05-55</div>
             <p class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </section>
           <div class="header-user-block">            
-            <div class="logged-user-info">
-              <a class="btn btn-sign-out" href="#">Равшан Джамшутович</a>
-            </div>
-            <ul class="logged-user-controls">
-              <li class="controls-item">
+            <ul class="account-controls">
+              <li class="account-controls-item">
+                <a class="btn btn-profile" href="#">Равшан Джамшутович</a>
+              </li>
+              <li class="account-controls-item">
+                <a class="btn btn-sign-out" href="#">Выход</a>
+              </li>
+            </ul>
+            <ul class="user-controls">
+              <li class="user-controls-item">
                 <a href="#">Мои заказы</a>                
               </li>
-              <li class="controls-item">
+              <li class="user-controls-item">
                 <a href="#">Личный кабинет</a>                
               </li>
             </ul>
@@ -55,13 +57,13 @@
           <nav class="main-navigation">
             <ul>
               <li>
-                <a href="#">Главная</a>
+                <a href="index.html">Главная</a>
               </li>
               <li>
                 <a href="#">Компания</a>
               </li>
               <li>
-                <a href="#">Каталог</a>
+                <a>Каталог</a>
               </li>
               <li>
                 <a href="#">Новости</a>
@@ -84,7 +86,7 @@
       <div class="container">
         <ul class="breadcrumbs">
           <li>
-            <a class="breadcrumbs-main" href="#">Главная</a>
+            <a class="breadcrumbs-main" href="index.html">Главная</a>
           </li>
           <li>
             <a href="#">Каталог</a>
@@ -100,7 +102,7 @@
       <div class="container products-category clearfix">
         <h2 class="products-title">Перфораторы</h2>
         <div class="products-filter">
-          <form class="filter-form" action="#" method="get">
+          <form class="filter-form" action="products-filter.php" method="get">
             <p class="title"><b>Фильтр:</b></p>
             <fieldset class="filter-by-price">
               <legend>Цена:</legend>
@@ -112,68 +114,76 @@
                 <div class="toggle toggle-max"></div>
               </div>
               <div class="range-values clearfix">
-                <input type="text" name="range-value-min" value="0">
-                <input type="text" name="range-value-max" value="30000">
+                <input type="text" class="range-value-min" name="minPrice" value="0">
+                <input type="text" class="range-value-max" name="maxPrice" value="30000">
               </div>
             </fieldset>            
             <fieldset class="filter-by-manufacturers">
               <legend>Производители:</legend>
               <ul>
-                <li>
+                <li class="filter-by-manufacturer-item">
                   <input id="manufacturer-bosch" type="checkbox" name="bosch" checked>
                   <label for="manufacturer-bosch">Bosch</label>
                 </li>
-                <li>
+                <li class="filter-by-manufacturer-item">
                   <input id="manufacturer-interskol" type="checkbox" name="interskol">
                   <label for="manufacturer-interskol">Интерскол</label>
                 </li>
-                <li>
+                <li class="filter-by-manufacturer-item">
                   <input id="manufacturer-makita" type="checkbox" name="makita" checked>
                   <label for="manufacturer-makita">Makita</label>
                 </li>
-                <li>
+                <li class="filter-by-manufacturer-item">
                   <input id="manufacturer-dewalt" type="checkbox" name="dewalt">
                   <label for="manufacturer-dewalt">Dewalt</label>
                 </li>
-                <li>
+                <li class="filter-by-manufacturer-item">
                   <input id="manufacturer-hitachi" type="checkbox" name="hitachi">
                   <label for="manufacturer-hitachi">Hitachi</label>
+                </li>
+                <li class="filter-by-manufacturer-item" style="display: none;">
+                  <input id="manufacturer-hitachi-disabled" type="checkbox" name="hitachi-disabled" disabled>
+                  <label for="manufacturer-hitachi-disabled">Hitachi</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="filter-by-porwered">
               <legend>Питание:</legend>
               <ul>
-                <li>
+                <li class="filter-by-porwered-item">
                   <input id="powered-battery" type="radio" name="powered" value="battery" checked>
                   <label for="powered-battery">Аккумуляторные</label>
                 </li>
-                <li>
-                  <input id="powered-mains" type="radio" name="powered" value="mains">
+                <li class="filter-by-porwered-item">
+                  <input id="powered-mains" type="radio" name="powered" value="mains" checked>
                   <label for="powered-mains">Сетевые</label>
                 </li>
+                <li class="filter-by-porwered-item" style="display: none;">
+                  <input id="powered-mains-disabled" type="radio" name="powered" value="mains-disabled" disabled>
+                  <label for="powered-mains-disabled">Сетевые</label>
+                </li>                
               </ul>
             </fieldset>
-            <button class="btn" type="submit">Показать</button>
+            <button class="btn btn-transparent" type="submit">Показать</button>
           </form>
         </div>
         <div class="products-list">
           <div class="products-order clearfix">
             <b class="title">Сортировка:</b>
             <ul class="products-order-controls">
-              <li class="order-control order-by-price">
-                <a class="active" href="#">по цене</a>
+              <li class="products-order-control by-price">
+                <a>по цене</a>
               </li>
-              <li class="order-control order-by-type">
+              <li class="products-order-control by-type">
                 <a href="#">по типу</a>
               </li>
-              <li class="order-control order-by-functionality">
+              <li class="products-order-control by-functionality">
                 <a href="#">по функционалу</a>
               </li>
             </ul>
             <div class="products-order-direction">
-              <a class="order-asc active" href="#">&uarr;</a>
-              <a class="order-desc" href="#">&darr;</a>
+              <a class="by-asc">&uarr;</a>
+              <a class="by-desc" href="#">&darr;</a>
             </div>
           </div>
           <ul class="products-grid">
@@ -202,7 +212,7 @@
               </article>
             </li>
             <li class="products-grid-item">
-              <article class="product-card marker-right marker-right-new">
+              <article class="product-card marker-right new">
                 <img src="img/perforator-bosch-bfg-2000.jpg" width="218" height="170" alt="Фото BFG 2000"/>
                 <h3 class="title">Перфоратор BOSCH BFG 2000</h3>
                 <div class="price price-old"></div>
@@ -226,7 +236,7 @@
               </article>
             </li>
             <li class="products-grid-item">
-              <article class="product-card marker-right marker-right-new">
+              <article class="product-card marker-right new">
                 <img src="img/perforator-bosch-bfg-6000.jpg" width="218" height="170" alt="Фото BFG 6000"/>
                 <h3 class="title">Перфоратор BOSCH BFG 6000</h3>
                 <div class="price price-old">30500 р.</div>
@@ -250,7 +260,7 @@
               </article>
             </li>
             <li class="products-grid-item">
-              <article class="product-card marker-right marker-right-new">
+              <article class="product-card marker-right new">
                 <img src="img/perforator-bosch-bfg-3000.jpg" width="218" height="170" alt="Фото BFG 3000"/>
                 <h3 class="title">Перфоратор BOSCH BFG 3000</h3>
                 <div class="price price-old">22500 р.</div>
@@ -287,17 +297,17 @@
             </li>
           </ul>
           <ul class="products-pagenation">
-            <li class="products-pagenation-item">
-              <a class="btn active">1</a>
+            <li class="products-pagenation-item number">
+              <a class="btn btn-transparent">1</a>
             </li>
-            <li class="products-pagenation-item">
-              <a class="btn" href="#">2</a>
+            <li class="products-pagenation-item number">
+              <a class="btn btn-transparent" href="#">2</a>
             </li>
-            <li class="products-pagenation-item">
-              <a class="btn" href="#">3</a>
+            <li class="products-pagenation-item number">
+              <a class="btn btn-transparent" href="#">3</a>
             </li>
-            <li class="products-pagenation-item">
-              <a class="btn" href="#">Следующая</a>
+            <li class="products-pagenation-item next">
+              <a class="btn btn-transparent" href="#">Следующая</a>
             </li>
           </ul>
         </div>
@@ -316,9 +326,7 @@
       <div class="footer-top">
         <div class="container clearfix">
           <section class="footer-contacts">
-            <a class="header-logo" href="#">
-              <img src="img/logo-tehnomart-footer.png" width="220" height="68" alt="Техномарт">
-            </a>
+            <a href="index.html" class="footer-top-logo">Техномарт</a>
             <p>
             г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
             +7 (812) 555-05-55
@@ -393,5 +401,23 @@
         </div>
       </div>
     </footer>
+    <div id="popup.new-order" class="popup new-order">
+      <div class="modal-new-order">
+        <button class="bnt-modal-close" type="button" title="Закрыть">
+          Закрыть
+        </button>
+        <div class="container">
+          <div class="new-order-content">
+            <p class="message">Товар добавлен в корзину!</p>
+          </div>
+        </div>
+        <div class="new-order-controls">
+          <div class="container">
+            <a href="#" class="btn btn-submit">Офирмить заказ</a>
+            <a href="#" class="btn btn-continue">Продолжить покупки</a>
+          </div>
+        </div>      
+      </div>
+    </div>    
   </body>
 </html>
