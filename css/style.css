@@ -1027,7 +1027,7 @@ img {
 
 .topmost-manufacturers img {
   position: absolute;
-  padding-bottom: 4px;
+  padding-bottom: 0px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
