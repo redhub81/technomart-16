@@ -158,6 +158,7 @@ img {
   box-sizing: border-box;
   background-color: transparent;
   color: #ffffff;
+  outline: none;
 }
 
 .header-top-search input[type="text"]:focus {
@@ -329,7 +330,7 @@ img {
   padding-left: 72px;  
   padding-bottom: 9px;
   border: 2px solid #ffffff;
-  color: #e9292a;
+  color: #e9292a;  
 }
 
 .header-shop-contacts .phone::before {
@@ -1694,6 +1695,7 @@ img {
   border-radius: 3px;
   color: #000000;
   background-color: transparent;
+  outline: none;
 }
 
 .btn-transparent:hover {
@@ -1788,6 +1790,10 @@ img {
   background: url("../img/icon-home-hover.png") no-repeat 0 0;
   */
   background-position: -241px -145px;
+}
+
+.breadcrumbs .breadcrumbs-main:active::before {
+  background-position: -206px -145px;
 }
 
 .breadcrumbs li:first-child::before {
@@ -1916,6 +1922,7 @@ img {
   border: none;
   text-align: center;
   background-color: #f7f3ec;
+  outline: none;
 }
 
 .range-values .range-value-min {
@@ -2450,6 +2457,16 @@ img {
   background-color: #ee3643;
 }
 
+.bnt-modal-close:hover::before,
+.bnt-modal-close:hover::after {
+  background-color: #ca2c37;
+}
+
+.bnt-modal-close:active::before,
+.bnt-modal-close:active::after {
+  background-color: #ba2732;
+}
+
 .bnt-modal-close::before {
   transform: rotate(45deg);
 }
@@ -2457,6 +2474,75 @@ img {
 .bnt-modal-close::after {
   transform: rotate(-45deg);
 }
+
+@keyframes fade-in {
+    0% {
+        background-color: rgba(0,0,0,0.0);
+    }
+    100% {
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+
+@keyframes bounce-up {
+  0%   {
+    transform: translateY(-2000px);
+  }
+  70%  {
+    transform: translateY(75px);
+  }
+  90%  {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes bounce-down {
+  0%   {
+    transform: translateY(3000px);
+  }
+  70%  {
+    transform: translateY(-75px);
+  }
+  90%  {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-right {
+  0%   {
+    transform: translateX(3000px);
+  }
+  70%  {
+    transform: translateX(-75px);
+  }
+  90%  {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
 /* 
 ****** modal-feedback *************************
 */
@@ -2466,6 +2552,8 @@ img {
 
 .popup.feedback.show {
   display: block;
+  background-color: rgba(0,0,0,0.5);
+  animation: fade-in 1s;
 }
 
 .modal-feedback {
@@ -2484,6 +2572,14 @@ img {
   box-shadow: 0 20px 40px rgba(0,1,1,0.75);
   color: #000000; 
   z-index: 100;
+}
+
+.modal-feedback.show {
+  animation: bounce-up 0.75s;
+}
+
+.modal-feedback.error {
+  animation: shake 0.75s;
 }
 
 .modal-feedback .bnt-modal-close {
@@ -2594,6 +2690,7 @@ img {
   color: #ffffff;
   text-transform: uppercase;
 }
+
 /* 
 ****** modal-map ******************************
 */
@@ -2603,6 +2700,8 @@ img {
 
 .popup.company-location.show {
   display: block;
+  background-color: rgba(0,0,0,0.5);
+  animation: fade-in 1s;
 }
 
 .modal-company-location {
@@ -2623,12 +2722,16 @@ img {
   z-index: 100;
 }
 
+.modal-company-location.show {
+  animation: bounce-down 0.75s;
+}
+
 .modal-company-location .bnt-modal-close {
   top: 9px;
   right: 9px;
 }
 
-.modal-company-location .company-location-block {
+.modal-company-location.company-location-block {
   display: block;
   width: 940px;
   height: 446px;
@@ -2643,8 +2746,9 @@ img {
 
 .popup.new-order.show {
   display: block;
+  background-color: rgba(0,0,0,0.5);
+  animation: fade-in 1s;
 }
-
 
 .modal-new-order {  
   position: absolute;
@@ -2663,6 +2767,11 @@ img {
   color: #000000; 
   z-index: 100;
 }
+
+.modal-new-order.show {
+  animation: bounce-right 0.75s;
+}
+
 
 .modal-new-order .bnt-modal-close {
   top: 5px;
@@ -2719,15 +2828,33 @@ img {
   padding-left: 23px;
   padding-right: 27px;
   border-radius: 3px;
-  background-color: #ee3643;
-  color: #ffffff;
   text-transform: uppercase;
   text-align: center;
+}
+
+.new-order-controls .btn-submit {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.new-order-controls .btn-submit:hover {
+  background-color: #ca2c37;
+}
+
+.new-order-controls .btn-submit:active {
+  background-color: #ba2732;
 }
 
 .new-order-controls .btn-continue {
   background-color: #ffffff;
   color: #000000;
+}
+
+.new-order-controls .btn-continue:hover {
+}
+
+.new-order-controls .btn-continue:active {
+  color: rgba(0,0,0,0.3);
 }
 
 .new-order-controls .btn:first-child {

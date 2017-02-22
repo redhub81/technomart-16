@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
     <title>Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,400i,700&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -390,19 +391,17 @@
     </footer>
     <div id="popup-feedback" class="popup feedback">
       <div class="modal-feedback">
-        <button class="bnt-modal-close" type="button" title="Закрыть">
-          Закрыть
-        </button>
+        <button class="bnt-modal-close" type="button" title="Закрыть">Закрыть</button>
         <form class="feedback-form" action="feedback.php" method="post">
           <div class="feedback-form-content container">
             <div class="field-boxes">
               <div class="field-box-item field-box-name">
                 <label for="field-name" class="title">Ваше имя:</label>
-                <input class="field" id="field-name" name="name" type="text" placeholder="Представьтесь, пожалуйста">
+                <input class="field" id="field-name" name="name" type="text" placeholder="Представьтесь, пожалуйста" required>
               </div>
               <div class="field-box-item field-box-email">
                 <label for="field-email" class="title">Ваш e-mail:</label>
-                <input class="field" id="field-email" name="email" type="text" placeholder="Для отправки ответа">
+                <input class="field" id="field-email" name="email" type="text" placeholder="Для отправки ответа" >
               </div>
             </div>
             <label for="field-message" class="title">Текст письма:</label>
@@ -417,13 +416,31 @@
       </div>
     </div>
     <div id="popup-company-location" class="popup company-location">
-      <div class="modal-company-location">
+      <div class="modal-company-location company-location-block" >
         <button class="bnt-modal-close" type="button" title="Закрыть">
           Закрыть
         </button>
-        <div></div>
-        <div id="yandex-map" class="company-location-block"></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.072880910986!2d30.315415195180453!3d59.940340778815866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1487726985319" width="940" height="446" frameborder="0" style="border:0"></iframe>
       </div>
     </div>
+    <div id="popup-new-order" class="popup new-order">
+      <div class="modal-new-order">
+        <button class="bnt-modal-close" type="button" title="Закрыть">
+          Закрыть
+        </button>
+        <div class="container">
+          <div class="new-order-content">
+            <p class="message">Товар добавлен в корзину!</p>
+          </div>
+        </div>
+        <div class="new-order-controls">
+          <div class="container">
+            <a href="сheckout.html" class="btn btn-submit">Офирмить заказ</a>
+            <a href="#" class="btn btn-continue">Продолжить покупки</a>
+          </div>
+        </div>      
+      </div>
+    </div>
+    <script src="js/script.min.js" type="text/javascript"></script>
   </body>
 </html>
